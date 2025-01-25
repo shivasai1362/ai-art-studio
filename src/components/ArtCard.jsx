@@ -20,7 +20,7 @@ function ArtCard({ artwork }) {
         <p className="text-gray-600 mb-3 font-medium">by {artwork.artist}</p>
         <div className="flex flex-wrap gap-2">
           <span className="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium hover:bg-indigo-100 transition-colors duration-200">
-            {artwork.style}
+            {artwork.style.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
           </span>
           <span className="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors duration-200">
             {artwork.medium.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}

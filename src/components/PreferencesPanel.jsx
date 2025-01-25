@@ -24,7 +24,7 @@ function PreferencesPanel({ preferences, setPreferences }) {
           <div className="relative">
             <input
               type="text"
-              placeholder="Search by title or artist..."
+              placeholder="Search by title or artist name..."
               value={preferences.searchTerm}
               onChange={(e) => setPreferences({...preferences, searchTerm: e.target.value})}
               className="w-full bg-white/50 backdrop-blur-sm border border-white/30 rounded-xl p-3 
