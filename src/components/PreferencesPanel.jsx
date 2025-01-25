@@ -92,7 +92,7 @@ function PreferencesPanel({ preferences, setPreferences }) {
           </select>
         </div>
 
-        <div className="pt-4">
+        {/* <div className="pt-4">
           <button 
             onClick={handleFilter}
             className="w-full py-3 px-4 bg-gradient-to-r from-indigo-600 to-pink-500 
@@ -102,7 +102,7 @@ function PreferencesPanel({ preferences, setPreferences }) {
           >
             Apply Filters
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Decorative elements */}

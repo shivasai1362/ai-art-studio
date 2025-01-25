@@ -3,7 +3,7 @@ import React from 'react';
 function ArtCard({ artwork }) {
   return (
     <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-      <div className="relative">
+      <a href={artwork.imageurl} target="_blank" rel="noopener noreferrer" className="block relative">
         <img 
           src={artwork.imageurl} 
           alt={artwork.title}
@@ -12,7 +12,7 @@ function ArtCard({ artwork }) {
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <p className="text-white text-sm">Click to view details</p>
         </div>
-      </div>
+      </a>
       <div className="p-5">
         <h3 className="text-xl font-semibold text-gray-800 mb-2 hover:text-indigo-600 transition-colors duration-200">
           {artwork.title}
