@@ -1,6 +1,11 @@
 import React from 'react';
 
 function PreferencesPanel({ preferences, setPreferences }) {
+  const handleFilter = (e) => {
+    e.preventDefault();
+    // Any additional filtering logic can go here
+  };
+
   return (
     <div className="backdrop-blur-md bg-white/30 p-6 rounded-2xl shadow-lg border border-white/20 overflow-hidden relative">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 pointer-events-none"></div>
@@ -62,10 +67,13 @@ function PreferencesPanel({ preferences, setPreferences }) {
         </div>
 
         <div className="pt-4">
-          <button className="w-full py-3 px-4 bg-gradient-to-r from-indigo-600 to-pink-500 
-                         text-white font-medium rounded-xl hover:opacity-90 transition-opacity
-                         duration-200 transform hover:scale-[1.02] active:scale-[0.98]
-                         shadow-lg shadow-indigo-500/25">
+          <button 
+            onClick={handleFilter}
+            className="w-full py-3 px-4 bg-gradient-to-r from-indigo-600 to-pink-500 
+                     text-white font-medium rounded-xl hover:opacity-90 transition-opacity
+                     duration-200 transform hover:scale-[1.02] active:scale-[0.98]
+                     shadow-lg shadow-indigo-500/25"
+          >
             Apply Filters
           </button>
         </div>

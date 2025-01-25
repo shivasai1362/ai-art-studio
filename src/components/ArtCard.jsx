@@ -5,7 +5,7 @@ function ArtCard({ artwork }) {
     <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
       <div className="relative">
         <img 
-          src={artwork.imageUrl} 
+          src={artwork.imageurl} 
           alt={artwork.title}
           className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300"
         />
