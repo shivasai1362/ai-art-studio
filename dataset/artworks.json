@@ -1,5 +1,373 @@
 [
     {
+        "id": 56,
+        "title": "Nebula",
+        "artist": "Nasa",
+        "imageurl": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1807&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "realism",
+        "medium": "digital-art"
+    },
+    {
+        "id": 55,
+        "title": "Joshua Earle",
+        "artist": "Jonny Gios",
+        "imageurl": "https://plus.unsplash.com/premium_photo-1673002094195-f18084be89ce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "realism",
+        "medium": "photography"
+    },
+    {
+        "id": 54,
+        "title": "Waterfront",
+        "artist": "Jonny Gios",
+        "imageurl": "https://plus.unsplash.com/premium_photo-1680284416536-b30b50358f7d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "realism",
+        "medium": "photography"
+    },
+    {
+        "id": 53,
+        "title": "Rush Hour",
+        "artist": " Luke Stackpoole",
+        "imageurl": "https://images.unsplash.com/photo-1517832349388-a54430ac9af0?q=80&w=397&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "contemporary",
+        "medium": "photography"
+    },
+    {
+        "id": 52,
+        "title": "City Portrait",
+        "artist": "Malte Schmidt",
+        "imageurl": "https://images.unsplash.com/photo-1512850183-6d7990f42385?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyMTk2MjU4fHxlbnwwfHx8fHw%3D",
+        "style": "abstract",
+        "medium": "photography"
+    },
+    {
+        "id": 51,
+        "title": "Marruecos",
+        "artist": "Andrea Enr\u00edquez Cousi\u00f1o",
+        "imageurl": "https://images.unsplash.com/photo-1635359466779-c988f6b87921?q=80&w=867&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "pop-art",
+        "medium": "collage"
+    },
+    {
+        "id": 50,
+        "title": "Modern Advertisement",
+        "artist": "Nathan Dumlao",
+        "imageurl": "https://images.unsplash.com/photo-1516342303872-a0ae54aeba35?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "street-art",
+        "medium": "collage"
+    },
+    {
+        "id": 49,
+        "title": "Poster",
+        "artist": " Jon Tyson",
+        "imageurl": "https://images.unsplash.com/photo-1547750588-51ce0c34f651?q=80&w=436&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "street-art",
+        "medium": "collage"
+    },
+    {
+        "id": 47,
+        "title": "Bristol street art",
+        "artist": " Annie Spratt",
+        "imageurl": "https://images.unsplash.com/photo-1591788788660-5a345f363d7a?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "minimalism",
+        "medium": "collage"
+    },
+    {
+        "id": 46,
+        "title": "Speech Bubbles",
+        "artist": "Prakasit Khuansuwan",
+        "imageurl": "https://plus.unsplash.com/premium_vector-1733027454102-7e963bd54f15?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "abstract",
+        "medium": "illustration"
+    },
+    {
+        "id": 45,
+        "title": "Coffee mug",
+        "artist": "Beatriz Camale\u00e3o",
+        "imageurl": "https://plus.unsplash.com/premium_vector-1709299690215-e3cdddb3060e?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGlnaXRhbCUyMGFydHN8ZW58MHx8MHx8fDA%3D",
+        "style": "conceptual",
+        "medium": "illustration"
+    },
+    {
+        "id": 43,
+        "title": "Astronomy Glitter",
+        "artist": " Dmytro Bayer",
+        "imageurl": "https://images.unsplash.com/photo-1737224103675-fb1945971cc0?q=80&w=385&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "surrealism",
+        "medium": "illustration"
+    },
+    {
+        "id": 42,
+        "title": "Film Industry",
+        "artist": "Getty Images",
+        "imageurl": "https://plus.unsplash.com/premium_vector-1689096843262-de709e6c44ad?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "conceptual",
+        "medium": "illustration"
+    },
+    {
+        "id": 41,
+        "title": "Vectorial",
+        "artist": "Cecilia Miraldi",
+        "imageurl": "https://plus.unsplash.com/premium_vector-1724317500709-8ce91450869d?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "minimalism",
+        "medium": "illustration"
+    },
+    {
+        "id": 40,
+        "title": "Angel",
+        "artist": "Marek Studzinski",
+        "imageurl": "https://images.unsplash.com/photo-1572702416711-902ec877386d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "contemporary",
+        "medium": "sculpture"
+    },
+    {
+        "id": 39,
+        "title": "Roman Statue",
+        "artist": " Anita Austvika",
+        "imageurl": "https://plus.unsplash.com/premium_photo-1675972401080-39e04692c97d?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "realism",
+        "medium": "sculpture"
+    },
+    {
+        "id": 38,
+        "title": "Guardian",
+        "artist": "Kateryna Hliznitsova",
+        "imageurl": "https://plus.unsplash.com/premium_photo-1677327622517-b2e4b202c0bb?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "realism",
+        "medium": "sculpture"
+    },
+    {
+        "id": 37,
+        "title": "Blue Water",
+        "artist": "Henrik D\u00f8nnestad",
+        "imageurl": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "impressionism",
+        "medium": "acrylic"
+    },
+    {
+        "id": 35,
+        "title": "Colibri",
+        "artist": "Camila Bustamante",
+        "imageurl": "https://images.unsplash.com/photo-1610354650003-e57d0f4ec18f?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "impressionism",
+        "medium": "watercolor"
+    },
+    {
+        "id": 34,
+        "title": "Liquid Art",
+        "artist": "Susan Wilkinson",
+        "imageurl": "https://plus.unsplash.com/premium_photo-1673624401837-de322f83489b?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "contemporary",
+        "medium": "watercolor"
+    },
+    {
+        "id": 33,
+        "title": "Seascape",
+        "artist": "Margaret Jaszowska",
+        "imageurl": "https://plus.unsplash.com/premium_photo-1674346440545-342af2fa5475?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "contemporary",
+        "medium": "oil-painting"
+    },
+    {
+        "id": 32,
+        "title": "Seascape",
+        "artist": "Annie Spratt",
+        "imageurl": "https://plus.unsplash.com/premium_photo-1664013263421-91e3a8101259?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "abstract",
+        "medium": "oil-painting"
+    },
+    {
+        "id": 31,
+        "title": "Battle",
+        "artist": "Europeana",
+        "imageurl": "https://images.unsplash.com/photo-1578320339840-73f0a565894c?q=80&w=1336&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "surrealism",
+        "medium": "mixed-media"
+    },
+    {
+        "id": 30,
+        "title": "Historical Moment",
+        "artist": "Europeana",
+        "imageurl": "https://images.unsplash.com/photo-1578321270951-88bd84d09a64?q=80&w=807&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "realism",
+        "medium": "acrylic"
+    },
+    {
+        "id": 29,
+        "title": "Claudine van royen",
+        "artist": "Europeana",
+        "imageurl": "https://images.unsplash.com/photo-1583934583792-262536fa7003?q=80&w=451&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "expressionism",
+        "medium": "acrylic"
+    },
+    {
+        "id": 28,
+        "title": "History Renaissance",
+        "artist": " adrianna geo",
+        "imageurl": "https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "contemporary",
+        "medium": "mixed-media"
+    },
+    {
+        "id": 27,
+        "title": "Flowers Digital",
+        "artist": "note thanun",
+        "imageurl": "https://images.unsplash.com/photo-1593073010991-be40fb54bef0?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "impressionism",
+        "medium": "digital-art"
+    },
+    {
+        "id": 26,
+        "title": "Windmill",
+        "artist": "daveartisans",
+        "imageurl": "https://images.unsplash.com/photo-1645821322980-8eb936d0d74a?q=80&w=498&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "impressionism",
+        "medium": "digital-art"
+    },
+    {
+        "id": 25,
+        "title": "Lyon",
+        "artist": "Bosco Shots",
+        "imageurl": "https://images.unsplash.com/photo-1569499559929-7a5b8b10899b?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "street-art",
+        "medium": "oil-painting"
+    },
+    {
+        "id": 24,
+        "title": "Mandala Art Women",
+        "artist": "Sijmen van Hooff",
+        "imageurl": "https://images.unsplash.com/photo-1603101243278-c181ceaad748?q=80&w=1056&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "minimalism",
+        "medium": "pencil-drawing"
+    },
+    {
+        "id": 23,
+        "title": "Mandala Art",
+        "artist": "mgfd",
+        "imageurl": "https://images.unsplash.com/photo-1551229848-24af7e52077a?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "minimalism",
+        "medium": "pencil-drawing"
+    },
+    {
+        "id": 22,
+        "title": "Grey Doodle",
+        "artist": " Yucel Moran",
+        "imageurl": "https://images.unsplash.com/photo-1599968165775-68187f07a084?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "pop-art",
+        "medium": "pencil-drawing"
+    },
+    {
+        "id": 21,
+        "title": "Mountains",
+        "artist": "Nicol\u00e1s Pinilla",
+        "imageurl": "https://images.unsplash.com/photo-1614556859483-88c323e4aa01?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "minimalism",
+        "medium": "pencil-drawing"
+    },
+    {
+        "id": 20,
+        "title": "Flowers",
+        "artist": " Ashley West Edwards",
+        "imageurl": "https://images.unsplash.com/photo-1554757391-032b3376581c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "impressionism",
+        "medium": "oil-painting"
+    },
+    {
+        "id": 19,
+        "title": "Roses",
+        "artist": "Margaret Jaszowska",
+        "imageurl": "https://images.unsplash.com/photo-1615502731978-f9d0c593d6c4?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "impressionism",
+        "medium": "oil-painting"
+    },
+    {
+        "id": 18,
+        "title": "Marbling",
+        "artist": "Planet Volumes",
+        "imageurl": "https://plus.unsplash.com/premium_photo-1707931342773-6eb567d4fd21?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "conceptual",
+        "medium": "pencil-drawing"
+    },
+    {
+        "id": 17,
+        "title": "Graffitti Art",
+        "artist": "Arpit Agrawal",
+        "imageurl": "https://images.unsplash.com/photo-1631070398737-4b379318e498?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "abstract",
+        "medium": "mixed-media"
+    },
+    {
+        "id": 16,
+        "title": "Graffitti",
+        "artist": "Shelby Ireland",
+        "imageurl": "https://images.unsplash.com/photo-1589844898512-6c2100b6f317?q=80&w=626&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "abstract",
+        "medium": "mixed-media"
+    },
+    {
+        "id": 15,
+        "title": "Human",
+        "artist": "Dan Farrell",
+        "imageurl": "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "realism",
+        "medium": "acrylic"
+    },
+    {
+        "id": 14,
+        "title": "Ocean",
+        "artist": "Henrik D\u00f8nnestad",
+        "imageurl": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "conceptual",
+        "medium": "watercolor"
+    },
+    {
+        "id": 13,
+        "title": "Modern Art",
+        "artist": "Steve Johnson",
+        "imageurl": "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?q=80&w=866&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "conceptual",
+        "medium": "watercolor"
+    },
+    {
+        "id": 12,
+        "title": "Handshake",
+        "artist": "Claudio Schwarz",
+        "imageurl": "https://images.unsplash.com/photo-1558522195-e1201b090344?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "minimalism",
+        "medium": "acrylic"
+    },
+    {
+        "id": 11,
+        "title": "Office Building",
+        "artist": "Simone Hutsch",
+        "imageurl": "https://images.unsplash.com/photo-1586869871566-d8e41dd50318?q=80&w=470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "street-art",
+        "medium": "digital-art"
+    },
+    {
+        "id": 10,
+        "title": "Wintery Landscape",
+        "artist": "Gantas Vai\u010diul\u0117nas",
+        "imageurl": "https://plus.unsplash.com/premium_photo-1720022609993-472f180738ed?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "impressionism",
+        "medium": "photography"
+    },
+    {
+        "id": 9,
+        "title": "Shadows of the East",
+        "artist": "British Library",
+        "imageurl": "https://images.unsplash.com/photo-1625043094370-221909f669f5?q=80&w=895&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "impressionism",
+        "medium": "pencil-drawing"
+    },
+    {
+        "id": 8,
+        "title": "Silken Windhound",
+        "artist": "Jackie Best",
+        "imageurl": "https://images.unsplash.com/photo-1737048850806-5cd8bc9fadda?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "style": "realism",
+        "medium": "photography"
+    },
+    {
         "id": 7,
         "title": "Europeana",
         "artist": "Europeana",

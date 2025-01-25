@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ArtCard from './ArtCard';
 import axios from 'axios';
-//import mockArtworks from '../../dataset/artworks.json'
+import mockArtworks from '../../dataset/artworks.json'
 
 
 function ArtFeed({ preferences }) {
@@ -50,14 +50,14 @@ function ArtFeed({ preferences }) {
 
   
   
-  const [mockArtworks, setMockArtWorks] = useState([]);
-  useEffect(()=>{
-    axios.get("http://localhost:5000/api/artworks")
-    .then((response) => setMockArtWorks(response.data))
-    .catch((err) => {
-      console.error("Error fetching artworks:", err);
-    });
-  }, [])
+  // const [mockArtworks, setMockArtWorks] = useState([]);
+  // useEffect(()=>{
+  //   axios.get("http://localhost:5000/api/artworks")
+  //   .then((response) => setMockArtWorks(response.data))
+  //   .catch((err) => {
+  //     console.error("Error fetching artworks:", err);
+  //   });
+  // }, [])
   
   // Enhanced filter function with search
   const filteredArtworks = mockArtworks.filter(artwork => {
