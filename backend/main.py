@@ -1,6 +1,7 @@
 import streamlit as st
 import psycopg2
 from psycopg2.extras import RealDictCursor
+import json
 
 
 # Database connection
@@ -121,3 +122,28 @@ if st.button("Extract as JS Array"):
         } for artwork in artworks
     ]
     st.code(f"const mockArtWorks = {js_array};", language="javascript")
+
+if st.button("Extract as JSON"):
+    try:
+        conn = get_connection()
+        cursor = conn.cursor(cursor_factory=RealDictCursor)
+        cursor.execute("SELECT id, title, artist, imageurl, style, medium FROM artworks ORDER BY id DESC")
+        artworks = cursor.fetchall()
+        cursor.close()
+        conn.close()
+
+        # Convert the data to a JSON string
+        json_data = json.dumps(artworks, indent=4)
+        
+        # Display JSON in the UI
+        st.json(artworks)
+        
+        # Provide a download button for the JSON
+        st.download_button(
+            label="Download JSON",
+            data=json_data,
+            file_name="artworks.json",
+            mime="application/json"
+        )
+    except Exception as e:
+        st.error(f"Error extracting JSON data: {e}")

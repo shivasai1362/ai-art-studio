@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ArtCard from './ArtCard';
 import axios from 'axios';
+//import mockArtworks from '../../dataset/artworks.json'
+
 
 function ArtFeed({ preferences }) {
   // const mockArtworks = [
@@ -46,7 +48,8 @@ function ArtFeed({ preferences }) {
   //   }
   // ];
 
-  // Filter artworks based on preferences
+  
+  
   const [mockArtworks, setMockArtWorks] = useState([]);
   useEffect(()=>{
     axios.get("http://localhost:5000/api/artworks")
@@ -56,6 +59,7 @@ function ArtFeed({ preferences }) {
     });
   }, [])
   
+  // Filter artworks based on preferences
   const filteredArtworks = mockArtworks.filter(artwork => {
     const styleMatch = preferences.style === 'all' || artwork.style === preferences.style;
     const mediumMatch = preferences.medium === 'all' || artwork.medium === preferences.medium;
