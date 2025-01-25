@@ -1,8 +1,18 @@
-# React + Vite
+# ArtSense AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ArtSense AI is a React-based web application, allowing users to explore different kinds of artworks according to their tastes. It offers them the chance to filter by style and medium as well as by title or name of artist.
 
-Currently, two official plugins are available:
+## Steps to Run the Application
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Install Dependencies**
+   Navigate to the project directory and install the required dependencies.
+
+   ```bash
+   npm install
+   ```
+2. **Start the Development Server**
+   Start the React development server to preview the application.
+   ```bash
+   npm run dev
+   ```
+
