@@ -7,7 +7,8 @@ function App() {
   const [preferences, setPreferences] = useState({
     style: 'all',
     medium: 'all',
-    period: 'all'
+    period: 'all',
+    searchTerm: ''  // Add search term to preferences
   });
 
   return (

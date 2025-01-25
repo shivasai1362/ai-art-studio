@@ -59,11 +59,16 @@ function ArtFeed({ preferences }) {
     });
   }, [])
   
-  // Filter artworks based on preferences
+  // Enhanced filter function with search
   const filteredArtworks = mockArtworks.filter(artwork => {
     const styleMatch = preferences.style === 'all' || artwork.style === preferences.style;
     const mediumMatch = preferences.medium === 'all' || artwork.medium === preferences.medium;
-    return styleMatch && mediumMatch;
+    const searchMatch = 
+      preferences.searchTerm === '' || 
+      artwork.title.toLowerCase().includes(preferences.searchTerm.toLowerCase()) ||
+      artwork.artist.toLowerCase().includes(preferences.searchTerm.toLowerCase());
+    
+    return styleMatch && mediumMatch && searchMatch;
   });
 
   // Show message if no matches found
