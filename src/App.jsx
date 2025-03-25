@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
-import ArtFeed from './components/ArtFeed';
 import PreferencesPanel from './components/PreferencesPanel';
+import GenerateImage from './components/GenerateImage';
+// Remove ArtFeed import
 
 function App() {
   const [preferences, setPreferences] = useState({
@@ -13,21 +14,18 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-indigo-600/5 to-transparent"></div>
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute -top-24 -left-24 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
       
       <Header />
-      <main className="container mx-auto px-4 py-8 flex flex-col items-center relative z-10">
-        <div className="w-full max-w-xl mb-12">
-          <PreferencesPanel 
+      <main className=" mt-16 mx-auto px-4 py-8 flex flex-col items-center relative z-10">
+        <div className="w-full mb-12 lg:flex">
+          <GenerateImage 
             preferences={preferences} 
             setPreferences={setPreferences}
           />
         </div>
         <div className="w-full">
-          <ArtFeed preferences={preferences} />
+          {/* ArtFeed component has been removed */}
+          
         </div>
       </main>
     </div>

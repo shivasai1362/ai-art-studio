@@ -26,7 +26,7 @@ function PreferencesPanel({ preferences, setPreferences }) {
   };
 
   return (
-    <div className="backdrop-blur-md bg-white/30 p-6 rounded-2xl shadow-lg border border-white/20 overflow-hidden relative">
+    <div className="w-full mb-2 lg:mb-0 lg:w-5/12 backdrop-blur-md bg-white/30 p-6 rounded-2xl shadow-lg border border-white/20 overflow-hidden relative">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 pointer-events-none"></div>
       
       <h2 className="text-2xl font-bold mb-6 text-gray-800 relative">
@@ -159,10 +159,6 @@ function PreferencesPanel({ preferences, setPreferences }) {
           </div>
         </div>
       </div>
-
-      {/* Decorative elements */}
-      <div className="absolute -top-10 -right-10 w-40 h-40 bg-pink-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-indigo-500/10 rounded-full blur-3xl"></div>
     </div>
   );
 }
