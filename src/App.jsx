@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import PreferencesPanel from './components/PreferencesPanel';
 import GenerateImage from './components/GenerateImage';
+import { createBrowserRouter } from 'react-router-dom';
+import Home from './components/Home';
+import Collections from './components/Collections';
 // Remove ArtFeed import
 
 function App() {
@@ -9,8 +12,27 @@ function App() {
     style: 'all',
     medium: 'all',
     period: 'all',
-    searchTerm: ''  // Add search term to preferences
+    promptText: ""
   });
+
+  const BrowserRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />
+    },
+    {
+      path: "collections",
+      element: <Collections />
+    },
+    {
+      path: "generate",
+      element: <GenerateImage 
+        preferences={preferences} 
+        setPreferences={setPreferences}
+      />
+    }
+
+  ]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 relative overflow-hidden">
