@@ -1,8 +1,26 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+
+
 
 function GeneratedImageDisplay({urls}) {
+
+  const [isSaving, setSaving] = useState(false)
+
+  const handleSaveToDb = async(url) => {
+    setSaving((prev) => !prev);
+    const respone = await axios.post("http://127.0.0.1:5000/saveimage", {imageUrl: url}, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    console.log(respone);
+    setSaving((prev) => !prev);
+  }
+
+
   return (
-    <div className="w-full ml-0 lg:ml-2 bg-white/30 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/20">
+    <div className="w-full ml-0 lg:ml-2 bg-white/30 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/20 lg:overflow-x-hidden lg:overflow-scroll lg:max-h-[86vh]">
       <h2 className="text-2xl font-bold mb-6 text-gray-800">
         AI Art Generator
         <div className="h-1 w-20 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full mt-2"></div>
@@ -20,12 +38,12 @@ function GeneratedImageDisplay({urls}) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {urls.map((url, index) => (
           <div key={index} className="relative group overflow-hidden bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
-            <link href={url}><img 
+            <img 
               src={url} 
               alt={`Generated Image ${index + 1}`} 
               className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" 
             />
-            </link>
+        
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
               <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 <p className="text-white font-medium text-sm">Generated Image {index + 1}</p>
@@ -35,7 +53,7 @@ function GeneratedImageDisplay({urls}) {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
                   </button>
-                  <button className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors text-white">
+                  <button disabled={isSaving} onClick={() => handleSaveToDb(url)} className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
                     </svg>

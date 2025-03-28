@@ -1,11 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+
+  const navigate = useNavigate();
+  
+  
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg shadow-sm py-4 px-6 border-b border-gray-200/80">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo and Title */}
-        <div className="flex items-center">
+        <div className="flex items-center" >
           <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-indigo-500/30">
             A
           </div>
@@ -18,13 +23,13 @@ function Header() {
         <div className="hidden md:flex items-center space-x-4">
           <button 
             className="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors font-medium"
-            onClick={() => console.log('Generate Images clicked')}
+            onClick={() => {navigate("/generate")}}
           >
             Generate Images
           </button>
           <button 
             className="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors font-medium"
-            onClick={() => console.log('Collections clicked')}
+            onClick={() => {navigate("/collections")}}
           >
             Collections
           </button>
