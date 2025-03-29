@@ -15,6 +15,8 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',  // Allow access from your network
     port: 5173,       // You can change the port if needed
-    allowedHosts: ['e9e6-45-112-29-36.ngrok-free.app']
-  }
+    allowedHosts: []
+  },
+  // Add this to ensure proper loading of environment variables
+  envPrefix: 'VITE_'
 })

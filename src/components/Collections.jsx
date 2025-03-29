@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import TopModal from './TopModal'
+import { backendUrl } from '../utils/apiConfig';
 
 function Collections() {
   const [images, setImages] = useState([])
@@ -19,7 +20,7 @@ function Collections() {
       status: "processing"
     });
     try {
-      const res = await axios.get("http://127.0.0.1:5000/getimages", {
+      const res = await axios.get(`${backendUrl}/getimages`, {
         headers: {
           'Content-Type': 'application/json',
         }
@@ -65,9 +66,7 @@ function Collections() {
     });
   }
 
-  // Function to handle image deletion - to be implemented
   const handleDeleteImage = async (imageId) => {
-    // TODO: Implement this function to delete image from database
     try {
       setModalInfo({
         isVisible: true,
@@ -75,13 +74,8 @@ function Collections() {
         status: 'processing'
       });
       
-      // Send delete request to backend
-      // const response = await axios.delete(`http://127.0.0.1:5000/deleteimage/${imageId}`);
-      
-      const response = await axios.delete(`http://127.0.0.1:5000/deleteimage/${imageId}`);
+      const response = await axios.delete(`${backendUrl}/deleteimage/${imageId}`);
       console.log(response.data);
-
-      
 
       // Remove the deleted image from state
       setImages(prevImages => prevImages.filter(img => img.id !== imageId));
@@ -99,7 +93,6 @@ function Collections() {
         status: 'error'
       });
     }
-    
   };
 
   return (

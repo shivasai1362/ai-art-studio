@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import TopModal from "./TopModal";
+import { backendUrl } from "../utils/apiConfig";
 
 function GeneratedImageDisplay({ urls }) {
   const [isSaving, setSaving] = useState(false);
@@ -22,7 +23,7 @@ function GeneratedImageDisplay({ urls }) {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:5000/saveimage",
+        `${backendUrl}/saveimage`,
         { imageUrl: url },
         {
           headers: {
@@ -102,6 +103,7 @@ function GeneratedImageDisplay({ urls }) {
               <img
                 src={url}
                 alt={`Generated Image ${index + 1}`}
+                
                 className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105"
               />
 
