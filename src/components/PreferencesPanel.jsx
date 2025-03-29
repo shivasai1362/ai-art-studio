@@ -48,7 +48,7 @@ function PreferencesPanel({ preferences, setPreferences, urls, setUrls }) {
       ...payload,
       prompt: completePrompt,
     };
-    console.log(updatedPayload);
+    //console.log(updatedPayload);
     try {
       const res = await axios.post(
         `${host}/v1/generation/text-to-image`,
@@ -206,7 +206,7 @@ function PreferencesPanel({ preferences, setPreferences, urls, setUrls }) {
               className={`w-full py-3 px-4 ${
                 inProgress
                   ? "bg-red-500"
-                  : "bg-gradient-to-r from-indigo-600 to-blue-500 "
+                  : "bg-gradient-to-r from-indigo-600 to-purple-600"
               } 
                        text-white font-medium rounded-xl hover:opacity-90 transition-opacity
                        duration-200 transform hover:scale-[1.02] active:scale-[0.98]

@@ -85,7 +85,7 @@ const payload = {
     save_meta: true,
     meta_scheme: "fooocus",
     save_extension: "png",
-    save_name: "",
+    save_name: "generated_image",
     read_wildcards_in_order: false,
     require_base64: false,
     async_process: false,

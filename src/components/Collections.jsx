@@ -25,7 +25,6 @@ function Collections() {
           'Content-Type': 'application/json',
         }
       })
-      
       setImages(res.data)
       setModalInfo({
         isVisible: true,
