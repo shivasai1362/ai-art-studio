@@ -13,6 +13,11 @@ function Collections() {
 
   const fetchImages = async() => {
     setLoading(true)
+    setModalInfo({
+      isVisible: true,
+      message: "Loading Images",
+      status: "processing"
+    });
     try {
       const res = await axios.get("http://127.0.0.1:5000/getimages", {
         headers: {

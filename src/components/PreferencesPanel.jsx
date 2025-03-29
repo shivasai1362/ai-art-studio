@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import TopModal from "./TopModal";
 
 function PreferencesPanel({ preferences, setPreferences, urls, setUrls }) {
   const host = "https://8888-01jmkfyt99cye7ab8t0dh80pm8.cloudspaces.litng.ai";
@@ -100,6 +101,14 @@ function PreferencesPanel({ preferences, setPreferences, urls, setUrls }) {
 
   const [inProgress, setInProgress] = useState(false);
 
+  const [modalInfo,setModalInfo] = useState({
+    isVisible: false,
+    message: '',
+    status: "success"
+  });
+
+
+
   const handleFilter = (e) => {
     e.preventDefault();
     // Any additional filtering logic can go here
@@ -111,6 +120,12 @@ function PreferencesPanel({ preferences, setPreferences, urls, setUrls }) {
 
     setInProgress((prev) => true);
 
+    setModalInfo({
+      isVisible: true,
+      message: "Your imagination is being rendered... This may take a few seconds.",
+      status: "processing"
+    })
+    
     let completePrompt =
       preferences.promptText || "A Doctor hitting a nurse with a hammer";
 
@@ -158,8 +173,17 @@ function PreferencesPanel({ preferences, setPreferences, urls, setUrls }) {
         temp.push(url);
       });
       setUrls(temp);
+      setModalInfo({
+        isVisible: true,
+        message: "Loading your image... Please wait."
+      })
     } catch (error) {
       console.log(error);
+      setModalInfo({
+        isVisible:true,
+        message: "Generation failed. Please try again later.",
+        status:"error"
+      })
     } finally {
       setInProgress((prev) => false);
     }
@@ -181,6 +205,12 @@ function PreferencesPanel({ preferences, setPreferences, urls, setUrls }) {
 
   return (
     <div className="w-full mb-2 lg:mb-0 lg:w-5/12 backdrop-blur-md bg-white/30 p-6 rounded-2xl shadow-lg border border-white/20 overflow-hidden relative">
+      <TopModal 
+        isVisible={modalInfo.isVisible}
+        message={modalInfo.message}
+        status={modalInfo.status}
+        onClose={() => setModalInfo({...modalInfo, isVisible:false})}
+      />
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 pointer-events-none"></div>
 
       <h2 className="text-2xl font-bold mb-6 text-gray-800 relative">
@@ -312,52 +342,6 @@ function PreferencesPanel({ preferences, setPreferences, urls, setUrls }) {
               {inProgress ? "Generating..." : "Generate AI Image"}
             </button>
 
-            {/* Database Actions */}
-            <div className="grid grid-cols-2 gap-3">
-              <button
-                onClick={handleAddToDatabase}
-                className="py-2 px-3 bg-gradient-to-r from-green-600 to-emerald-500 
-                         text-white font-medium rounded-xl hover:opacity-90 transition-opacity
-                         duration-200 shadow-md flex items-center justify-center gap-2"
-              >
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                Save to Collection
-              </button>
-
-              <button
-                onClick={handleRemoveFromDatabase}
-                className="py-2 px-3 bg-gradient-to-r from-rose-600 to-pink-500 
-                         text-white font-medium rounded-xl hover:opacity-90 transition-opacity
-                         duration-200 shadow-md flex items-center justify-center gap-2"
-              >
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                  />
-                </svg>
-                Remove Selected
-              </button>
-            </div>
           </div>
         </div>
       </div>

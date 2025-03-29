@@ -4,12 +4,24 @@ import TopModal from "./TopModal";
 
 function GeneratedImageDisplay({ urls }) {
   const [isSaving, setSaving] = useState(false);
+  const [modalInfo, setModalInfo] = useState({
+    isVisible: false,
+    message: '',
+    status: 'success'
+  });
 
   const handleSaveToDb = async (url) => {
-    setSaving((prev) => true);
+    setSaving(true);
+    
+    // Show processing modal
+    setModalInfo({
+      isVisible: true,
+      message: 'Adding image to collection...',
+      status: 'processing'
+    });
 
     try {
-      const respone = await axios.post(
+      const response = await axios.post(
         "http://127.0.0.1:5000/saveimage",
         { imageUrl: url },
         {
@@ -18,10 +30,24 @@ function GeneratedImageDisplay({ urls }) {
           },
         }
       );
+      
+      // Show success modal
+      setModalInfo({
+        isVisible: true,
+        message: 'Image saved to collection!',
+        status: 'success'
+      });
     } catch (error) {
       console.log(error);
+      
+      // Show error modal
+      setModalInfo({
+        isVisible: true,
+        message: 'Failed to save image to collection',
+        status: 'error'
+      });
     } finally {
-      setSaving((prev) => false);
+      setSaving(false);
     }
   };
 
@@ -30,7 +56,14 @@ function GeneratedImageDisplay({ urls }) {
   }
 
   return (
-    <div className="relative  w-full ml-0 lg:ml-2 bg-white/30 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/20 lg:overflow-x-hidden lg:overflow-scroll lg:max-h-[86vh]">
+    <div className="relative w-full ml-0 lg:ml-2 bg-white/30 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/20 lg:overflow-x-hidden lg:overflow-scroll lg:max-h-[86vh]">
+      <TopModal 
+        isVisible={modalInfo.isVisible}
+        message={modalInfo.message}
+        status={modalInfo.status}
+        onClose={() => setModalInfo({...modalInfo, isVisible: false})}
+      />
+      
       <h2 className="text-2xl font-bold mb-6 text-gray-800">
         AI Art Generator
         <div className="h-1 w-20 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full mt-2"></div>
@@ -64,7 +97,7 @@ function GeneratedImageDisplay({ urls }) {
           {urls.map((url, index) => (
             <div
               key={index}
-              className=" relative group overflow-hidden bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+              className="relative group overflow-hidden bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
             >
               <img
                 src={url}
@@ -79,8 +112,10 @@ function GeneratedImageDisplay({ urls }) {
                   </p>
                   <div className="flex mt-2 space-x-2">
                     {/*Download Button*/}
-                    <button className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors text-white"
-                    onClick={() => {handleDownload(url)}}
+                    <button 
+                      className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors text-white"
+                      onClick={() => {handleDownload(url)}}
+                      title="Download image"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -106,6 +141,7 @@ function GeneratedImageDisplay({ urls }) {
                           ? "bg-gray-400 cursor-not-allowed"
                           : "bg-white/20 hover:bg-white/30"
                       }`}
+                      title="Add to collection"
                     >
                       {isSaving ? (
                         <svg

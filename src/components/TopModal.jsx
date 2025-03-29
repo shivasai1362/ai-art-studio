@@ -1,35 +1,30 @@
 import React, { useEffect } from 'react';
+import ReactDOM from 'react-dom';
 
 function TopModal({ isVisible, message, status, onClose }) {
-  // Status can be: 'processing', 'success', 'error'
-  
   useEffect(() => {
-    if (isVisible) {
-      // Auto-close the modal after 3 seconds
+    if (isVisible && status != 'processing') {
       const timer = setTimeout(() => {
         onClose();
       }, 1500);
-      
       return () => clearTimeout(timer);
     }
-  }, [isVisible, onClose]);
+  }, [isVisible, onClose, status]);
 
-  // Define background colors based on status
   const getBgColor = () => {
     switch (status) {
-      case 'processing':
-        return 'bg-yellow-500';
-      case 'success':
-        return 'bg-green-500';
-      case 'error':
-        return 'bg-red-500';
-      default:
-        return 'bg-blue-500';
+      case 'processing': return 'bg-yellow-500';
+      case 'success': return 'bg-green-500';
+      case 'error': return 'bg-red-500';
+      default: return 'bg-blue-500';
     }
   };
 
-  return (
-    <div className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 w-full ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+  return ReactDOM.createPortal(
+    <div
+      className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 w-full transition-all duration-500
+      ${isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+    >
       <div className={`${getBgColor()} text-white py-3 px-4 rounded-b-lg flex items-center justify-between shadow-lg transition-transform duration-500 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="flex items-center">
           {status === 'processing' && (
@@ -56,7 +51,8 @@ function TopModal({ isVisible, message, status, onClose }) {
           </svg>
         </button>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
