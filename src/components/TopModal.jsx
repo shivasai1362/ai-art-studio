@@ -8,7 +8,7 @@ function TopModal({ isVisible, message, status, onClose }) {
       // Auto-close the modal after 3 seconds
       const timer = setTimeout(() => {
         onClose();
-      }, 3000);
+      }, 1500);
       
       return () => clearTimeout(timer);
     }
@@ -29,8 +29,8 @@ function TopModal({ isVisible, message, status, onClose }) {
   };
 
   return (
-    <div className={`absolute top-0  transform -translate-x-1/2 z-50 transition-all duration-500 w-full shadow-lg ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
-      <div className={`${getBgColor()} text-white py-3 px-4 rounded-b-lg flex items-center justify-between`}>
+    <div className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 w-full ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+      <div className={`${getBgColor()} text-white py-3 px-4 rounded-b-lg flex items-center justify-between shadow-lg transition-transform duration-500 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="flex items-center">
           {status === 'processing' && (
             <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

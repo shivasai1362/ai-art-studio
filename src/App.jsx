@@ -9,12 +9,7 @@ import Layout from './components/Layout';
 // Remove ArtFeed import
 
 function App() {
-  const [preferences, setPreferences] = useState({
-    style: 'all',
-    medium: 'all',
-    period: 'all',
-    promptText: ""
-  });
+  
 
   const BrowserRouter = createBrowserRouter([
     {
@@ -22,7 +17,7 @@ function App() {
       element: <Layout />,
       children: [
         {path: "/", element: <Home />},
-        {path: "generate", element: <GenerateImage preferences={preferences} setPreferences={setPreferences} />},
+        {path: "generate", element: <GenerateImage  />},
         {path: "collections", element: <Collections />},
       ]
     }
