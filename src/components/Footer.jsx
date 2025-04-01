@@ -19,9 +19,6 @@ function Footer() {
             <p className="text-gray-600 mb-4 pr-4">
               Transform your ideas into stunning artwork using our advanced AI. Create, collect, and share unique digital masterpieces.
             </p>
-            <p className="text-sm text-gray-500 mb-4 pr-4 italic border-l-2 border-indigo-300 pl-3">
-              Images are generated using the Fooocus API. To use this application, you'll need to connect to a Fooocus API instance running either on your local machine or hosted in the cloud.
-            </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-indigo-600 transition-colors">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
