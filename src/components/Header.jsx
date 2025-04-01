@@ -31,7 +31,7 @@ function Header() {
         </div>
 
         {/* Navigation Buttons - Desktop */}
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden md:flex items-center space-x-4 ">
           <button 
             className="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors font-medium"
             onClick={() => navigateTo("/generate")}

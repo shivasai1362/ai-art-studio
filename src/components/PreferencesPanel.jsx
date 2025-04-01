@@ -16,13 +16,13 @@ function PreferencesPanel({ preferences, setPreferences, urls, setUrls }) {
   });
 
   const handleCreateImage = async () => {
-    setInProgress((prev) => true);
     setUrls([]);
     setModalInfo({
       isVisible: true,
       message: "Your imagination is being rendered... This may take a few seconds.",
       status: "processing",
     });
+    setInProgress((prev) => true);
 
     let completePrompt =
       (preferences.promptText.length === 0 ? "A beautiful landscape" : preferences.promptText)
@@ -66,7 +66,7 @@ function PreferencesPanel({ preferences, setPreferences, urls, setUrls }) {
         let url = obj.url.replace("http://127.0.0.1:8888", host);
         temp.push(url);
       });
-      setUrls(() => temp);
+      setUrls(temp);
       setModalInfo({
         isVisible: true,
         message: "Loading your image... Please wait.",
