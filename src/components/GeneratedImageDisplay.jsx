@@ -2,8 +2,12 @@ import axios from "axios";
 import React, { useState } from "react";
 import TopModal from "./TopModal";
 import { backendUrl } from "../utils/apiConfig";
+import { useUser } from "@clerk/clerk-react";
 
-function GeneratedImageDisplay({ urls }) {
+function GeneratedImageDisplay({ urls, preferences }) {
+
+  const {user} = useUser();
+
   const [isSaving, setSaving] = useState(false);
   const [modalInfo, setModalInfo] = useState({
     isVisible: false,
@@ -24,7 +28,7 @@ function GeneratedImageDisplay({ urls }) {
     try {
       const response = await axios.post(
         `${backendUrl}/saveimage`,
-        { imageUrl: url },
+        { imageUrl: url, prompt: ((preferences.promptText.length === 0) ? "An Artistic Image" : preferences.promptText), clerkUserId: user.id},
         {
           headers: {
             "Content-Type": "application/json",

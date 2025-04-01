@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import TopModal from './TopModal'
 import { backendUrl } from '../utils/apiConfig';
+import { useUser } from '@clerk/clerk-react';
 
 function Collections() {
   const [images, setImages] = useState([])
@@ -11,7 +12,10 @@ function Collections() {
     message: '',
     status: 'success'
   })
+  const {user} = useUser();
 
+
+  //Fetch images from the backend
   const fetchImages = async() => {
     setLoading(true)
     setModalInfo({
@@ -20,11 +24,14 @@ function Collections() {
       status: "processing"
     });
     try {
-      const res = await axios.get(`${backendUrl}/getimages`, {
+      const res = await axios.get(`${backendUrl}/getimages/${user.id}`, {
         headers: {
           'Content-Type': 'application/json',
         }
       })
+      
+      console.log(res.data);
+
       setImages(res.data)
       setModalInfo({
         isVisible: true,
@@ -77,7 +84,7 @@ function Collections() {
       console.log(response.data);
 
       // Remove the deleted image from state
-      setImages(prevImages => prevImages.filter(img => img.id !== imageId));
+      setImages(prevImages => prevImages.filter(img => img._id !== imageId));
       
       setModalInfo({
         isVisible: true,
@@ -138,7 +145,7 @@ function Collections() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {images.map((imageObj, index) => (
             <div 
-              key={imageObj.id || index} 
+              key={index} 
               className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group relative"
             >
               <div 
@@ -147,7 +154,7 @@ function Collections() {
               >
                 <img 
                   src={`data:image/png;base64,${imageObj.image}`}
-                  alt={`Generated Image ${imageObj.id || index}`}
+                  alt={`Generated Image ${index}`}
                   className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
@@ -161,11 +168,11 @@ function Collections() {
               </div>
               <div className="p-4">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-gray-800 font-medium">Generated Image {imageObj.id || index + 1}</h3>
+                  <h3 className="text-gray-800 font-medium">Generated Image {index + 1}</h3>
                   <button 
                     onClick={(e) => {
                       e.stopPropagation();
-                      handleDeleteImage(imageObj.id);
+                      handleDeleteImage(imageObj._id);
                     }} 
                     className="p-1.5 bg-red-50 text-red-500 rounded-full hover:bg-red-100 transition-colors"
                     aria-label="Delete image"
