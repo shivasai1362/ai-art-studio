@@ -1,18 +1,43 @@
-# ArtSense AI
+# AI Art Studio
 
-ArtSense AI is a React-based web application, allowing users to explore different kinds of artworks according to their tastes. It offers them the chance to filter by style and medium as well as by title or name of artist.
+AI Art Studio is a modern web application that allows users to generate custom AI artwork by providing prompts and customizing various style parameters. The application integrates with the Fooocus API to generate images and provides a personal collection system where users can save and manage their generated masterpieces.
 
-## Steps to Run the Application
+![AI Art Studio Screenshot](https://placeholder.com/ai-art-studio-screenshot.png)
 
-1. **Install Dependencies**
-   Navigate to the project directory and install the required dependencies.
+## Features
 
-   ```bash
-   npm install
-   ```
-2. **Start the Development Server**
-   Start the React development server to preview the application.
-   ```bash
-   npm run dev
-   ```
+- **AI Image Generation**: Generate custom artwork using text prompts
+- **Style Customization**: Choose from various art styles and mediums
+- **User Authentication**: Secure user accounts powered by Clerk
+- **Personal Collections**: Save and manage your generated images
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+
+## Tech Stack
+
+- **Frontend**:
+  - React 18 (with Vite)
+  - React Router
+  - Tailwind CSS
+  - Clerk for authentication
+  - Axios for API requests
+
+- **Backend**:
+  - Express.js
+  - MongoDB (with Mongoose)
+  - Fooocus API integration
+
+## Prerequisites
+
+Before running this project, you'll need:
+
+- Node.js (v16+)
+- MongoDB database
+- Clerk account for authentication
+- Fooocus API instance (local or hosted)
+
+## Environment Variables
+
+Create a `.env` file in the root directory with the following variables:
+
+```
 
